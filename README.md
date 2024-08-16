@@ -1,5 +1,6 @@
 Download Visual Sudios Community and make sure to select
-c++ stuff when installing.
+c++ stuff when installing. You might even need to add the
+linux embedded c++ package during install.
 
 Open Developers Command Prompt when it's installed and
 navigate to the directory that has MaxUp.c example:
