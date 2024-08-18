@@ -11,8 +11,8 @@ int main(int argc, char* argv[]) {
  s.l=1;
  s.m=0;
  if(!input) {
-	 perror("Memory could not be allocated.");
-	 return 1;
+  perror("Memory could not be allocated.");
+  return 1;
  }
  while(playing==1) {
   printf("Max Up!\n");
@@ -56,7 +56,6 @@ int main(int argc, char* argv[]) {
    }
   }
  }
- if(input)
-  free(input);
+ free(input);
  exit(0);
 }
