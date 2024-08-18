@@ -7,9 +7,13 @@ struct stats {
 int main(int argc, char* argv[]) {
  char* input=0;
  char playing=1;
- input = malloc(INPUTS);
+ input = (char *) malloc(INPUTS);
  s.l=1;
  s.m=0;
+ if(!input) {
+	 perror("Memory could not be allocated.");
+	 return 1;
+ }
  while(playing==1) {
   printf("Max Up!\n");
   printf("1. Train 2. Fight 3. Exit ");
@@ -44,7 +48,7 @@ int main(int argc, char* argv[]) {
      printf("|Muscles: %d                   |\n", s.m);
      printf("+------------------------------+\n");
      playing=0;
-     getch();
+     fgets(input, 3, stdin);
     } else
      printf("Level: %d\n", s.l);
    } else {
